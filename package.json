@@ -8,12 +8,17 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "localtunnel": "^2.0.2",
     "axios": "^1.6.0",
     "dotenv": "^16.3.1",
+    "localtunnel": "^2.0.2",
     "winston": "^3.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
   }
 }

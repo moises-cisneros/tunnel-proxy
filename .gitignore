@@ -6,3 +6,9 @@ tunnel.log
 
 # environment variables
 .env
+
+# codegraph index
+.codegraph/
+
+# agent tooling
+.atl/

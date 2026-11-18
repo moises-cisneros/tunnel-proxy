@@ -18,8 +18,8 @@ Tunnel Proxy es una herramienta diseñada para crear un túnel persistente entre
 
 ## 🚀 Requisitos Previos
 
-- **Node.js** (v14 o superior)
-- **npm** (v6 o superior)
+- **Node.js** (v18 o superior)
+- **pnpm** (v9 o superior) - instalación: `npm install -g pnpm` o `corepack enable`
 - Tu servidor local funcionando (ej. backend de Flutter en puerto 8080)
 
 ## 📦 Instalación
@@ -33,7 +33,7 @@ cd tunnel-proxy
 # Copiar el contenido de cada archivo
 
 # Instalar dependencias
-npm install
+pnpm install
 ```
 
 ## ⚙️ Configuración
@@ -83,10 +83,10 @@ LOG_LEVEL=info
 
 ```bash
 # Iniciar el túnel (modo normal)
-npm start
+pnpm start
 
 # Modo desarrollo con auto-reload
-npm run dev
+pnpm dev
 
 # Detener (Ctrl+C)
 ```
@@ -96,7 +96,7 @@ npm run dev
 #### 1. **Inicio Normal**
 
 ```bash
-$ npm start
+$ pnpm start
 
 [INFO]: 🌟 Iniciando servicio de túnel persistente...
 [INFO]: 🔍 Verificando puerto local 8080...
@@ -118,7 +118,7 @@ WS_BASE_URL=wss://hip-views-heal.loca.lt/ws
 Si tu servidor aún no está corriendo:
 
 ```bash
-$ npm start
+$ pnpm start
 
 [WARN]: ⚠️ Puerto local 8080 no está disponible (conexión rechazada)
 [INFO]: 🔍 Esperando que el puerto 8080 esté disponible...
@@ -134,7 +134,7 @@ $ npm start
 
 ```bash
 # Con nohup
-nohup npm start > tunnel.log 2>&1 &
+nohup pnpm start > tunnel.log 2>&1 &
 
 # Ver logs
 tail -f tunnel.log
@@ -148,7 +148,7 @@ kill [PID]
 
 ```bash
 # Instalar PM2 globalmente
-npm install -g pm2
+pnpm add -g pm2
 
 # Iniciar el túnel con PM2
 pm2 start index.js --name "tunnel-proxy"
@@ -225,7 +225,7 @@ grep "WARN" tunnel.log
 
 ### Estructura de Logs
 
-```
+``` Bash
 2024-01-15 10:30:45 [INFO]: 🌟 Iniciando servicio de túnel persistente...
 2024-01-15 10:30:45 [INFO]: 🔍 Verificando puerto local 8080...
 2024-01-15 10:30:45 [INFO]: ✅ Puerto local 8080 está disponible
@@ -240,7 +240,7 @@ grep "WARN" tunnel.log
 
 ```bash
 # Instalar nodemon para auto-reload
-npm run dev
+pnpm dev
 ```
 
 ### Scripts Disponibles
@@ -272,7 +272,7 @@ npm run dev
 Si encuentras algún problema, verifica:
 
 1. ✅ Node.js está actualizado (`node --version`)
-2. ✅ Todas las dependencias están instaladas (`npm install`)
+2. ✅ Todas las dependencias están instaladas (`pnpm install`)
 3. ✅ Tu servidor local está corriendo en el puerto correcto
 4. ✅ Revisa los logs en `tunnel.log`
 
@@ -290,6 +290,6 @@ MIT - Libre para uso personal y comercial, mas detalles en [License](LICENSE).
 
 **Project Repository:** [https://github.com/moises-cisneros/tunnel-proxy](https://github.com/moises-cisneros/tunnel-proxy)
 
-Este proyecto fue creado y es mantenido por Moisés Cisneros para resolver la necesidad de una solución de túnel persistente para el desarrollo móvil con Flutter y las pruebas de API locales en dispositivos físicos.
+Este proyecto fue creado y es mantenido por Moises Cisneros para resolver la necesidad de una solución de túnel persistente para el desarrollo móvil con Flutter y las pruebas de API locales en dispositivos físicos.
 
 Para preguntas, sugerencias o contribuciones, por favor, abre una incidencia en GitHub o contáctame directamente.
