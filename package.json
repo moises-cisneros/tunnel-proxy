@@ -1,0 +1,19 @@
+{
+  "name": "tunnel-proxy",
+  "version": "1.0.0",
+  "description": "Proxy persistente con reconexión automática",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "localtunnel": "^2.0.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

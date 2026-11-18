@@ -1,0 +1,8 @@
+# node modules
+node_modules
+
+# logs
+tunnel.log
+
+# environment variables
+.env
